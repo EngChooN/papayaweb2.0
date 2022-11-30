@@ -15,15 +15,32 @@ export const Wrapper = styled.header`
 export const Nav = styled.nav`
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 `;
 
 export const Left = styled.section`
   display: flex;
+  align-items: center;
 `;
 
 export const PapayaLogo = styled.img`
   width: 158px;
+`;
+
+export const DropDownBtn = styled.div`
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #6d6d6d;
+  padding-left: 30px;
+  transition: all 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  :hover {
+    color: #29b06d;
+  }
 `;
 
 export const NavBtn = styled.div`
@@ -33,6 +50,8 @@ export const NavBtn = styled.div`
   color: #6d6d6d;
   padding-left: 30px;
   transition: all 0.3s ease-in;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   :hover {
     color: #29b06d;
@@ -53,6 +72,7 @@ export const CashShopBtn = styled.div`
 
 export const Right = styled.section`
   display: flex;
+  align-items: center;
 `;
 
 // export const DropDownWindow = styled.article`

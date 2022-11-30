@@ -14,15 +14,15 @@ export default function HeaderUI(props: any) {
           <Header.Left>
             <Header.PapayaLogo src={imgUrl.papayaLogo} />
             {/* 드롭다운 버튼 */}
-            <Header.NavBtn onClick={props.onClickDropDown}>
+            <Header.DropDownBtn onClick={props.onClickDropDown}>
               GAMES
               {/* 드롭다운 버튼 아이콘 */}
               {!props.dropDownFlag ? (
-                <AiFillCaretDown style={{ paddingTop: "6px" }} />
+                <AiFillCaretDown style={{ height: "10px" }} />
               ) : (
-                <AiFillCaretUp style={{ paddingTop: "6px" }} />
+                <AiFillCaretUp style={{ height: "10px" }} />
               )}
-            </Header.NavBtn>
+            </Header.DropDownBtn>
             <Header.CashShopBtn>CASH SHOP</Header.CashShopBtn>
           </Header.Left>
           {/* 헤더 오른쪽 */}
@@ -32,6 +32,7 @@ export default function HeaderUI(props: any) {
             </Header.NavBtn>
             <Header.NavBtn>Sign in</Header.NavBtn>
             <Header.NavBtn>Support</Header.NavBtn>
+            {/* 언어변경 버튼 (컴포넌트) */}
             <LocalBtn />
           </Header.Right>
         </Header.Nav>
