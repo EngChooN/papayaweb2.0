@@ -2,7 +2,7 @@ import * as Header from "./Header.styles";
 import { AiFillCaretDown } from "@react-icons/all-files/ai/AiFillCaretDown";
 import { AiFillCaretUp } from "@react-icons/all-files/ai/AiFillCaretUp";
 import { imgUrl } from "../../ts/data/url";
-import DropDownWindow from "../../component/papaya/dropDownWindow/DropDownWindow";
+import DropDownWindow from "../../component/papaya/dropDownWindow/DropDownWindow.container";
 import LocalBtn from "../../component/papaya/localBtn/LocalBtn.container";
 
 export default function HeaderUI(props: any) {
