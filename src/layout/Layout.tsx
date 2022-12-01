@@ -5,12 +5,10 @@ export default function Layout(props: any) {
   const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
+    width: 100%;
   `;
 
-  const Body = styled.main`
-    /* width: 100%;
-    height: 100%; */
-  `;
+  const Body = styled.main``;
 
   return (
     <Wrapper>

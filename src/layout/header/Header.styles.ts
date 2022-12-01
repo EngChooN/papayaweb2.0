@@ -26,6 +26,8 @@ export const Left = styled.section`
 
 export const PapayaLogo = styled.img`
   width: 158px;
+  // 윈도우에서...
+  padding-top: 10px;
 `;
 
 export const DropDownBtn = styled.div`
@@ -65,6 +67,7 @@ export const CashShopBtn = styled.div`
   color: #29b06d;
   padding-left: 30px;
   transition: all 0.3s ease-out;
+  cursor: pointer;
   :hover {
     color: #0c8b4c;
   }

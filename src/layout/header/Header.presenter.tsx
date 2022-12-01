@@ -1,9 +1,9 @@
 import * as Header from "./Header.styles";
 import { AiFillCaretDown } from "@react-icons/all-files/ai/AiFillCaretDown";
 import { AiFillCaretUp } from "@react-icons/all-files/ai/AiFillCaretUp";
-import { imgUrl } from "../../ts/url";
+import { imgUrl } from "../../ts/data/url";
 import DropDownWindow from "../../component/papaya/dropDownWindow/DropDownWindow";
-import LocalBtn from "../../component/papaya/localBtn/LocalBtn";
+import LocalBtn from "../../component/papaya/localBtn/LocalBtn.container";
 
 export default function HeaderUI(props: any) {
   return (
@@ -18,9 +18,11 @@ export default function HeaderUI(props: any) {
               GAMES
               {/* 드롭다운 버튼 아이콘 */}
               {!props.dropDownFlag ? (
-                <AiFillCaretDown style={{ height: "10px" }} />
+                <AiFillCaretDown
+                  style={{ height: "15px", paddingTop: "4px" }}
+                />
               ) : (
-                <AiFillCaretUp style={{ height: "10px" }} />
+                <AiFillCaretUp style={{ height: "15px", paddingTop: "4px" }} />
               )}
             </Header.DropDownBtn>
             <Header.CashShopBtn>CASH SHOP</Header.CashShopBtn>
