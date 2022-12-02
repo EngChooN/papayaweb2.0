@@ -1,5 +1,5 @@
 import * as Lang from "./LocalBtn.styles";
-import { imgUrl } from "../../../ts/data/url";
+import { papayaImgUrl } from "../../../ts/data/url";
 import { AiFillCaretDown } from "@react-icons/all-files/ai/AiFillCaretDown";
 import { AiFillCaretUp } from "@react-icons/all-files/ai/AiFillCaretUp";
 import { BsCheck } from "@react-icons/all-files/bs/BsCheck";
@@ -11,7 +11,10 @@ export default function LocalBtnUI(props: any) {
         onMouseOver={() => props.setMouseOver(true)}
         onMouseLeave={() => props.setMouseOver(false)}
       >
-        <Lang.LocalImg src={imgUrl.localImg} style={{ paddingRight: "5px" }} />
+        <Lang.LocalImg
+          src={papayaImgUrl.localImg}
+          style={{ paddingRight: "5px" }}
+        />
         <Lang.CurrentLanguage>{props.currentLang}</Lang.CurrentLanguage>
         {!props.mouseOver ? (
           <AiFillCaretDown style={{ height: "10px" }} />

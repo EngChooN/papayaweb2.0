@@ -1,9 +1,9 @@
 import * as Header from "./Header.styles";
 import { AiFillCaretDown } from "@react-icons/all-files/ai/AiFillCaretDown";
 import { AiFillCaretUp } from "@react-icons/all-files/ai/AiFillCaretUp";
-import { imgUrl } from "../../ts/data/url";
-import DropDownWindow from "../../component/papaya/dropDownWindow/DropDownWindow.container";
-import LocalBtn from "../../component/papaya/localBtn/LocalBtn.container";
+import { papayaImgUrl } from "../../../ts/data/url";
+import DropDownWindow from "../../../component/papaya/dropDownWindow/DropDownWindow.container";
+import LocalBtn from "../../../component/papaya/localBtn/LocalBtn.container";
 
 export default function HeaderUI(props: any) {
   return (
@@ -12,7 +12,7 @@ export default function HeaderUI(props: any) {
         <Header.Nav>
           {/* 헤더 왼쪽 */}
           <Header.Left>
-            <Header.PapayaLogo src={imgUrl.papayaLogo} />
+            <Header.PapayaLogo src={papayaImgUrl.papayaLogo} />
             {/* 드롭다운 버튼 */}
             <Header.DropDownBtn onClick={props.onClickDropDown}>
               GAMES

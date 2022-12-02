@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import Header from "./header/Header.container";
+import Footer from "./papaya/footer/Footer";
+import Header from "./papaya/header/Header.container";
 
 export default function Layout(props: any) {
   const Wrapper = styled.section`
@@ -14,6 +15,7 @@ export default function Layout(props: any) {
     <Wrapper>
       <Header />
       <Body>{props.children}</Body>
+      <Footer />
     </Wrapper>
   );
 }
