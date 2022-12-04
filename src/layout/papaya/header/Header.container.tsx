@@ -7,7 +7,6 @@ export default function Header() {
 
   // 드롭다운 버튼 클릭 함수
   const onClickDropDown = () => {
-    console.log("dropState", dropDownFlag);
     setDropDownFlag(!dropDownFlag);
   };
 

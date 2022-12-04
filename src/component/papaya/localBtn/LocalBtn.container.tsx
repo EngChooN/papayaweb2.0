@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import LocalBtnUI from "./LocalBtn.presenter";
+import { currentLangState } from "../../../recoil/language";
+import { useRecoilState } from "recoil";
 
-export default function LocalBtn() {
+export default function LocalBtn(props: any) {
   const [mouseOver, setMouseOver] = useState(false);
 
   // 현재 선택언어
-  const [currentLang, setCurrentLang] = useState("English");
+  const [currentLang, setCurrentLang] = useRecoilState(currentLangState);
 
   // 언어선택 데이터
   const [languages, setLanguages] = useState([
@@ -51,7 +53,6 @@ export default function LocalBtn() {
   const getLocalstorageLang = () => {
     // 화면으로 표시된 선택한 언어를 업데이트 위해 다시 로컬스토리지의 국가코드를 불러와서,
     if (localStorage.getItem("countryCode") !== null) {
-      console.log(localStorage.getItem("countryCode"));
       const getSelectLang = localStorage.getItem("countryCode");
       // 가져온 국가코드로 언어 배열 데이터의 상태값을 바꿈
       for (let i = 0; i < languages.length; i++) {
@@ -89,6 +90,7 @@ export default function LocalBtn() {
       setMouseOver={setMouseOver}
       languages={languages}
       ChooseLanguage={ChooseLanguage}
+      topPosition={props.topPosition}
       currentLang={currentLang}
     />
   );

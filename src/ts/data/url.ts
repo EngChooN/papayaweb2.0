@@ -6,7 +6,7 @@ export const papayaImgUrl = {
 
   //버티고 로고
   vertigoLogo:
-    "http://test.papayaplay.com:8080/papaya/assets/images/portal/footer/vertigo-logo.svg",
+    "https://static.papayaplay.com/static/assets/images/portal/footer/vertigo-logo.svg",
 
   // 지구본 이미지
   localImg:

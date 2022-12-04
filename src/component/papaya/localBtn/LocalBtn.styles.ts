@@ -24,7 +24,7 @@ export const LocalWindow = styled.div`
   z-index: ${(props: any) => (!props.mouseOver ? "-1" : "1")};
   transition: opacity 0.1s ease-in-out;
   width: 100px;
-  top: 50px;
+  top: ${(props: any) => props.topPosition + "px"};
   right: 110px;
 `;
 

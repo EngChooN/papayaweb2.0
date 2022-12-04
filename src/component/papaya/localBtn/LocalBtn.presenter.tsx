@@ -23,6 +23,7 @@ export default function LocalBtnUI(props: any) {
         )}
       </Lang.Wrapper>
       <Lang.LocalWindow
+        topPosition={props.topPosition}
         mouseOver={props.mouseOver}
         onMouseOver={() => props.setMouseOver(true)}
         onMouseLeave={() => props.setMouseOver(false)}

@@ -9,7 +9,9 @@ export default function Layout(props: any) {
     width: 100%;
   `;
 
-  const Body = styled.main``;
+  const Body = styled.main`
+    min-height: 100%;
+  `;
 
   return (
     <Wrapper>

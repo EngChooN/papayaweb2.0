@@ -1,14 +1,15 @@
+import BannerSlickSlider from "../src/component/papaya/bannerSlickSlider/BannerSlickSlider.container";
+
 export default function Home() {
   return (
     <div
       style={{
         backgroundColor: "white",
         width: "100%",
-        height: "800px",
         zIndex: 7,
       }}
     >
-      main home
+      <BannerSlickSlider />
     </div>
   );
 }
