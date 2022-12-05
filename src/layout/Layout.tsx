@@ -10,7 +10,7 @@ export default function Layout(props: any) {
   `;
 
   const Body = styled.main`
-    min-height: 100%;
+    overflow-y: hidden;
   `;
 
   return (
