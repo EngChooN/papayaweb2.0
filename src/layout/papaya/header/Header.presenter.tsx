@@ -35,7 +35,7 @@ export default function HeaderUI(props: any) {
             <Header.NavBtn>Sign in</Header.NavBtn>
             <Header.NavBtn>Support</Header.NavBtn>
             {/* 언어변경 버튼 (컴포넌트) */}
-            <LocalBtn topPosition={50} />
+            <LocalBtn topPosition={35} />
           </Header.Right>
         </Header.Nav>
       </Header.Wrapper>

@@ -34,6 +34,7 @@ const BtnSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 `;
 
 const Btn = styled.div`
@@ -45,7 +46,6 @@ const Btn = styled.div`
   transition: all 0.3s ease-in;
   display: flex;
   align-items: center;
-  margin-top: 7px;
   padding-right: 7px;
   padding-left: 7px;
   border-right: 1.1px solid #767676;
@@ -82,7 +82,7 @@ export default function Footer() {
               <Btn>{el.title}</Btn>
             </a>
           ))}
-          <LocalBtn topPosition={-120} />
+          <LocalBtn bottomPosition={35} />
         </BtnSection>
       </TopSection>
       <Capitalize>

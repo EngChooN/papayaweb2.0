@@ -6,7 +6,7 @@ import { BsCheck } from "@react-icons/all-files/bs/BsCheck";
 
 export default function LocalBtnUI(props: any) {
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Lang.Wrapper
         onMouseOver={() => props.setMouseOver(true)}
         onMouseLeave={() => props.setMouseOver(false)}
@@ -24,6 +24,7 @@ export default function LocalBtnUI(props: any) {
       </Lang.Wrapper>
       <Lang.LocalWindow
         topPosition={props.topPosition}
+        bottomPosition={props.bottomPosition}
         mouseOver={props.mouseOver}
         onMouseOver={() => props.setMouseOver(true)}
         onMouseLeave={() => props.setMouseOver(false)}
@@ -52,6 +53,6 @@ export default function LocalBtnUI(props: any) {
           )}
         </Lang.LocalList>
       </Lang.LocalWindow>
-    </>
+    </div>
   );
 }

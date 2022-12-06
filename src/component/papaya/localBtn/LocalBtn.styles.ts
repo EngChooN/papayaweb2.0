@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-  padding-left: 30px;
+  // hover 영역으로 인하여, padding 값으로 영역을 키움
+  padding-top: 10px;
   padding-bottom: 10px;
+
+  padding-left: 30px;
   display: flex;
   align-items: center;
-  // 윈도우에서...
-  padding-top: 15px;
   font-size: 8px;
   color: black;
   cursor: pointer;
@@ -25,7 +26,8 @@ export const LocalWindow = styled.div`
   transition: opacity 0.1s ease-in-out;
   width: 100px;
   top: ${(props: any) => props.topPosition + "px"};
-  right: 110px;
+  bottom: ${(props: any) => props.bottomPosition + "px"};
+  right: 20px;
 `;
 
 export const CurrentLanguage = styled.span`

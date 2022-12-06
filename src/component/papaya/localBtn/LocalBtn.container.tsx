@@ -90,7 +90,10 @@ export default function LocalBtn(props: any) {
       setMouseOver={setMouseOver}
       languages={languages}
       ChooseLanguage={ChooseLanguage}
+      // css top 값
       topPosition={props.topPosition}
+      // css bottom 값
+      bottomPosition={props.bottomPosition}
       currentLang={currentLang}
     />
   );

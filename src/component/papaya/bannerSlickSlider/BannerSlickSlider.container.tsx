@@ -1,7 +1,9 @@
 import BannerSlickSliderUI from "./BannerSlickSlider.presenter";
+import { Settings } from "./BannerSlickSlider.types";
 
 export default function BannerSlickSlider() {
-  const settings = {
+  // 슬라이더 커스텀 옵션
+  const settings: Settings = {
     dots: true,
     infinite: true,
     arrows: true,

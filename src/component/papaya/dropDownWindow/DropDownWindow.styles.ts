@@ -10,6 +10,7 @@ export const DropDownWin = styled.section`
   position: absolute;
   display: flex;
   overflow-y: hidden;
+  z-index: 1;
 `;
 
 export const gameSection = styled.div`
