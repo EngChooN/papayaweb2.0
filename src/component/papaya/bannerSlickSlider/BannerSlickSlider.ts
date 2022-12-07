@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
 export const ElWrapper = styled.div`
   background-color: black;
   width: 100%;
-  height: 500px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
