@@ -3,13 +3,13 @@ import Slider from "react-slick";
 
 export const Wrapper = styled.section`
   width: 100%;
-  height: 100%;
+  height: 500px;
 `;
 
 export const ElWrapper = styled.div`
   background-color: black;
   width: 100%;
-  height: 1000px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +51,8 @@ export const Button = styled.div`
 export const CustomSlider = styled(Slider)`
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
   .slick-prev::before,
   .slick-next::before {
     opacity: 0;
