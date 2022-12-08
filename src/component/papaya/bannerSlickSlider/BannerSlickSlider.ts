@@ -49,6 +49,7 @@ export const Button = styled.div`
 
 // 슬라이더 커스텀
 export const CustomSlider = styled(Slider)`
+  overflow: hidden;
   width: 100%;
   height: 100%;
   display: flex;

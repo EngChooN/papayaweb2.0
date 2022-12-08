@@ -1,3 +1,4 @@
+import Banner from "../src/component/papaya/banner/Banner";
 import BannerSlickSlider from "../src/component/papaya/bannerSlickSlider/BannerSlickSlider.container";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       }}
     >
       <BannerSlickSlider />
+      <Banner />
     </div>
   );
 }

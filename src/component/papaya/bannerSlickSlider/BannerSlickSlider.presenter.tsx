@@ -15,6 +15,14 @@ export default function BannerSlickSliderUI({ settings }: SettingsProps) {
             <BannerSlickSlider.Button>Button</BannerSlickSlider.Button>
           </a>
         </BannerSlickSlider.ElWrapper>
+        <BannerSlickSlider.ElWrapper>
+          <BannerSlickSlider.Logo src={""} />
+          <BannerSlickSlider.Title>Title</BannerSlickSlider.Title>
+          <BannerSlickSlider.Content>Content</BannerSlickSlider.Content>
+          <a>
+            <BannerSlickSlider.Button>Button</BannerSlickSlider.Button>
+          </a>
+        </BannerSlickSlider.ElWrapper>
       </BannerSlickSlider.CustomSlider>
     </BannerSlickSlider.Wrapper>
   );

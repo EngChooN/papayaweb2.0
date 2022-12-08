@@ -8,6 +8,7 @@ const Wrapper = styled.footer`
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 500px;
   background-color: #eaeaeb;
   padding-left: 95px;
   padding-right: 95px;
