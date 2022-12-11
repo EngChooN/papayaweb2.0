@@ -12,7 +12,7 @@ export default function BannerSlickSliderUI({ settings }: SettingsProps) {
           <BannerSlickSlider.Title>Title</BannerSlickSlider.Title>
           <BannerSlickSlider.Content>Content</BannerSlickSlider.Content>
           <a>
-            <BannerSlickSlider.Button>Button</BannerSlickSlider.Button>
+            <BannerSlickSlider.Button>Learn More</BannerSlickSlider.Button>
           </a>
         </BannerSlickSlider.ElWrapper>
         <BannerSlickSlider.ElWrapper>
@@ -20,7 +20,7 @@ export default function BannerSlickSliderUI({ settings }: SettingsProps) {
           <BannerSlickSlider.Title>Title</BannerSlickSlider.Title>
           <BannerSlickSlider.Content>Content</BannerSlickSlider.Content>
           <a>
-            <BannerSlickSlider.Button>Button</BannerSlickSlider.Button>
+            <BannerSlickSlider.Button>Learn More</BannerSlickSlider.Button>
           </a>
         </BannerSlickSlider.ElWrapper>
       </BannerSlickSlider.CustomSlider>

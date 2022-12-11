@@ -3,11 +3,14 @@ import Slider from "react-slick";
 
 export const Wrapper = styled.section`
   width: 100%;
-  height: 500px;
+  height: 580px;
+  background-image: url("https://cdn.papayaplay.com/SF/1620/1740/2601/home_slider.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 export const ElWrapper = styled.div`
-  background-color: black;
   width: 100%;
   height: 100%;
   display: flex;
@@ -19,30 +22,31 @@ export const ElWrapper = styled.div`
 export const Logo = styled.img``;
 
 export const Title = styled.div`
-  font-size: 5rem;
+  font-size: 50px;
   font-weight: 700;
   color: #fff;
   text-shadow: 2px 4px 0 rgb(0 0 0 / 50%);
 `;
 
 export const Content = styled.div`
-  margin-top: 1.1rem;
-  max-width: 45.9rem;
-  font-size: 2rem;
+  margin-top: 11px;
+  max-width: 459px;
+  font-size: 20px;
   color: #dee1e2;
   text-shadow: 2px 4px 0 rgb(0 0 0 / 50%);
 `;
 
 export const Button = styled.div`
   outline: none;
-  margin-top: 3rem;
+  margin-top: 30px;
   display: block;
-  max-width: 18.2rem;
-  padding: 0.8rem 2.9rem;
+  max-width: 138px;
+  width: 100%;
+  padding: 8px 29px;
   border: 1px solid #ffffff;
   border-radius: 100px;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
 `;
