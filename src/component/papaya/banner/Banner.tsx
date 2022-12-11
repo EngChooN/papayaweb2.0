@@ -28,17 +28,21 @@ const LeftImg = styled.img`
   position: absolute;
   bottom: 0px;
   right: 80px;
+  max-width: 276px;
+  width: 100%;
 `;
 
 const Title = styled.div`
   font-size: 32px;
   font-weight: 600;
   color: #464646;
+  z-index: 1;
 `;
 
 const Content = styled.div`
   font-size: 16px;
   color: #464646;
+  z-index: 1;
 `;
 
 const Btn = styled.div`
@@ -51,11 +55,13 @@ const Btn = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 `;
 
 const Right = styled.div`
   /* width: 30%; */
   width: 365px;
+  min-width: 365px;
   display: flex;
   flex-direction: column;
   background-color: #1e2023;
