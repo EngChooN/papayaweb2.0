@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.section`
-  margin-bottom: 6.9rem;
+  margin-bottom: 70px;
   max-width: 1221px;
   width: 100%;
-  max-height: 33.2rem;
+  max-height: 332px;
   height: 330px;
-  margin-top: 7rem;
+  margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
