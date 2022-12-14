@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Wrapper = styled.section`
   margin-bottom: 70px;
-  max-width: 1221px;
+  max-width: 1450px;
   width: 100%;
   max-height: 332px;
   height: 330px;
