@@ -39,15 +39,21 @@ export default function GameListUI({ tapState, setTapState }) {
           {/* 각각의 게임 썸네일 이미지 */}
           <GameList.ElThumbnail
             src={
-              "http://test.papayaplay.com:8080/papaya/assets/images/portal/event/papayaplay_christmas_theme/eos_thumb.png"
+              "https://static.papayaplay.com/static/assets/images/portal/event/papayaplay_christmas_theme/eos_thumb.png"
             }
           />
           <GameList.ElInfoWrapper>
             {/* 각각의 게임 미니 이미지 */}
-            <GameList.ElInfoImg />
+            <GameList.ElInfoImg
+              src={
+                "https://static.papayaplay.com/static/assets/images/portal/gnb/2021_new/eos_sm.png"
+              }
+            />
             <GameList.ElInfoDetail>
               {/* 게임명 */}
+              <GameList.ElInfoTitle>Echo Of Soul</GameList.ElInfoTitle>
               {/* 게임 장르 */}
+              <GameList.ElInfoGenre>RPG</GameList.ElInfoGenre>
             </GameList.ElInfoDetail>
           </GameList.ElInfoWrapper>
         </GameList.ElWrapper>

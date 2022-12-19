@@ -63,17 +63,42 @@ export const ElWrapper = styled.div`
   /* margin: 1.5rem 1.68rem; */
   box-sizing: border-box;
   width: 100%;
-  max-width: 21.3rem;
+  max-width: 213px;
+  margin-top: 20px;
   padding: 7px 8.5px 10px 8.5px;
   border: 1px solid #dee1e2;
   border-radius: 10px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ElThumbnail = styled.img``;
 
-export const ElInfoWrapper = styled.div``;
+export const ElInfoWrapper = styled.div`
+  display: flex;
+  margin-top: 10px;
+`;
 
-export const ElInfoImg = styled.img``;
+export const ElInfoImg = styled.img`
+  margin-right: 10px;
+`;
 
-export const ElInfoDetail = styled.div``;
+export const ElInfoDetail = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const ElInfoTitle = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+  color: #464646;
+`;
+
+export const ElInfoGenre = styled.div`
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f8c8d;
+`;
