@@ -1,17 +1,29 @@
 import BannerSlickSliderUI from "./BannerSlickSlider.presenter";
 import { Settings } from "./BannerSlickSlider.types";
 import { useState, useEffect } from "react";
-// test
 import axios from "axios";
 
 export default function BannerSlickSlider() {
-  // test
   useEffect(() => {
-    console.log("데이터 가져올게~");
-    axios.get("http://10.0.1.78:8080/portal/main/banner").then((res) => {
-      console.log("배너 슬라이더 데이터", res);
-    });
+    loadBannerSliderData();
   }, []);
+
+  // 홈 슬라이더 배너 데이터 호출
+  const loadBannerSliderData = async () => {
+    await axios({
+      method: "get",
+      url: "/portal/main/banner",
+    })
+      .then((res) => {
+        console.log("res", res);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const [data, setData] = useState(null);
 
   // 슬라이더 커스텀 옵션
   const settings: Settings = {
@@ -23,5 +35,5 @@ export default function BannerSlickSlider() {
     slidesToScroll: 1,
   };
 
-  return <BannerSlickSliderUI settings={settings} />;
+  return <BannerSlickSliderUI settings={settings} data={data} />;
 }

@@ -46,6 +46,10 @@ export const TapMenu = styled.div`
     background-color: #29b06d;
     color: white;
   }
+  &.active {
+    background-color: #29b06d;
+    color: white;
+  }
 `;
 
 export const TapName = styled.div`

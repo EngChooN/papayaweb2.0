@@ -8,6 +8,7 @@ export default function GameListUI({ tapState, setTapState }) {
         {/* 게임 카테고리 탭 */}
         <GameList.TapWrapper>
           <GameList.TapMenu
+            className={tapState == 0 ? "active" : ""}
             onClick={() => {
               setTapState(0);
               console.log(tapState);
@@ -16,6 +17,7 @@ export default function GameListUI({ tapState, setTapState }) {
             <GameList.TapName>ALL</GameList.TapName>
           </GameList.TapMenu>
           <GameList.TapMenu
+            className={tapState == 1 ? "active" : ""}
             onClick={() => {
               setTapState(1);
               console.log(tapState);
@@ -24,6 +26,7 @@ export default function GameListUI({ tapState, setTapState }) {
             <GameList.TapName>RPG</GameList.TapName>
           </GameList.TapMenu>
           <GameList.TapMenu
+            className={tapState == 2 ? "active" : ""}
             onClick={() => {
               setTapState(2);
               console.log(tapState);

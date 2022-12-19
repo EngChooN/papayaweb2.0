@@ -4,19 +4,23 @@ import Slider from "react-slick";
 export const Wrapper = styled.section`
   width: 100%;
   height: 580px;
-  background-image: url("https://cdn.papayaplay.com/SF/1620/1740/2601/home_slider.jpeg");
+  /* background-image: url("https://cdn.papayaplay.com/SF/1620/1740/2601/home_slider.jpeg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 `;
 
 export const ElWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 580px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 11.5%;
+  background-image: url("https://cdn.papayaplay.com/SF/1620/1740/2601/home_slider.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 export const Logo = styled.img``;
