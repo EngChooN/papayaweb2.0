@@ -1,66 +1,83 @@
 import * as GameList from "./GameList.styles";
+import GameListModal from "./gameListModal/GameListModal.container";
 
-export default function GameListUI({ tapState, setTapState }) {
+export default function GameListUI({
+  tapState,
+  setTapState,
+  hoverSate,
+  setHoverState,
+}) {
   return (
-    <GameList.Wrapper>
-      <GameList.TopSection>
-        <GameList.Title>PAPAYA GAMES</GameList.Title>
-        {/* 게임 카테고리 탭 */}
-        <GameList.TapWrapper>
-          <GameList.TapMenu
-            className={tapState == 0 ? "active" : ""}
-            onClick={() => {
-              setTapState(0);
-              console.log(tapState);
+    <>
+      <GameList.Wrapper>
+        <GameList.TopSection>
+          <GameList.Title>PAPAYA GAMES</GameList.Title>
+          {/* 게임 카테고리 탭 */}
+          <GameList.TapWrapper>
+            <GameList.TapMenu
+              className={tapState == 0 ? "active" : ""}
+              onClick={() => {
+                setTapState(0);
+                console.log(tapState);
+              }}
+            >
+              <GameList.TapName>ALL</GameList.TapName>
+            </GameList.TapMenu>
+            <GameList.TapMenu
+              className={tapState == 1 ? "active" : ""}
+              onClick={() => {
+                setTapState(1);
+                console.log(tapState);
+              }}
+            >
+              <GameList.TapName>RPG</GameList.TapName>
+            </GameList.TapMenu>
+            <GameList.TapMenu
+              className={tapState == 2 ? "active" : ""}
+              onClick={() => {
+                setTapState(2);
+                console.log(tapState);
+              }}
+            >
+              <GameList.TapName>FPS</GameList.TapName>
+            </GameList.TapMenu>
+          </GameList.TapWrapper>
+        </GameList.TopSection>
+        <GameList.ListsSection>
+          {/* 각각의 게임 박스 */}
+          <GameList.ElWrapper
+            onMouseEnter={() => {
+              setHoverState(true);
+            }}
+            onMouseLeave={() => {
+              setHoverState(false);
             }}
           >
-            <GameList.TapName>ALL</GameList.TapName>
-          </GameList.TapMenu>
-          <GameList.TapMenu
-            className={tapState == 1 ? "active" : ""}
-            onClick={() => {
-              setTapState(1);
-              console.log(tapState);
-            }}
-          >
-            <GameList.TapName>RPG</GameList.TapName>
-          </GameList.TapMenu>
-          <GameList.TapMenu
-            className={tapState == 2 ? "active" : ""}
-            onClick={() => {
-              setTapState(2);
-              console.log(tapState);
-            }}
-          >
-            <GameList.TapName>FPS</GameList.TapName>
-          </GameList.TapMenu>
-        </GameList.TapWrapper>
-      </GameList.TopSection>
-      <GameList.ListsSection>
-        {/* 각각의 게임 박스 */}
-        <GameList.ElWrapper>
-          {/* 각각의 게임 썸네일 이미지 */}
-          <GameList.ElThumbnail
-            src={
-              "https://static.papayaplay.com/static/assets/images/portal/event/papayaplay_christmas_theme/eos_thumb.png"
-            }
-          />
-          <GameList.ElInfoWrapper>
-            {/* 각각의 게임 미니 이미지 */}
-            <GameList.ElInfoImg
+            {/* 각각의 게임 썸네일 이미지 */}
+            <GameList.ElThumbnail
               src={
-                "https://static.papayaplay.com/static/assets/images/portal/gnb/2021_new/eos_sm.png"
+                "https://static.papayaplay.com/static/assets/images/portal/event/papayaplay_christmas_theme/eos_thumb.png"
               }
             />
-            <GameList.ElInfoDetail>
-              {/* 게임명 */}
-              <GameList.ElInfoTitle>Echo Of Soul</GameList.ElInfoTitle>
-              {/* 게임 장르 */}
-              <GameList.ElInfoGenre>RPG</GameList.ElInfoGenre>
-            </GameList.ElInfoDetail>
-          </GameList.ElInfoWrapper>
-        </GameList.ElWrapper>
-      </GameList.ListsSection>
-    </GameList.Wrapper>
+            <GameList.ElInfoWrapper>
+              {/* 각각의 게임 미니 이미지 */}
+              <GameList.ElInfoImg
+                src={
+                  "https://static.papayaplay.com/static/assets/images/portal/gnb/2021_new/eos_sm.png"
+                }
+              />
+              <GameList.ElInfoDetail>
+                {/* 게임명 */}
+                <GameList.ElInfoTitle>Echo Of Soul</GameList.ElInfoTitle>
+                {/* 게임 장르 */}
+                <GameList.ElInfoGenre>RPG</GameList.ElInfoGenre>
+              </GameList.ElInfoDetail>
+            </GameList.ElInfoWrapper>
+            {/* 호버 시, 모달 창 */}
+            {hoverSate ? <GameListModal /> : null}
+          </GameList.ElWrapper>
+        </GameList.ListsSection>
+      </GameList.Wrapper>
+    </>
   );
 }

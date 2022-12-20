@@ -17,3 +17,8 @@ export interface SettingsProps {
     slidesToScroll: number;
   };
 }
+
+export interface PropsType {
+  settings: SettingsProps;
+  data: any;
+}

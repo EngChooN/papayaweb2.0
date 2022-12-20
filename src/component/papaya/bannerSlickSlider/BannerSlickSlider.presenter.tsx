@@ -1,35 +1,30 @@
 import * as BannerSlickSlider from "./BannerSlickSlider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SettingsProps } from "./BannerSlickSlider.types";
+import { PropsType, SettingsProps } from "./BannerSlickSlider.types";
 
-export default function BannerSlickSliderUI(
-  { settings }: SettingsProps,
-  { data }
-) {
-  console.log(data);
+export default function BannerSlickSliderUI({ settings, data }: PropsType) {
+  console.log("받은 데이터", data);
   return (
     <BannerSlickSlider.Wrapper>
-      <BannerSlickSlider.CustomSlider {...settings}>
-        {data?.map((el) => (
-          <BannerSlickSlider.ElWrapper>
-            <BannerSlickSlider.Logo src={""} />
-            <BannerSlickSlider.Title>Title</BannerSlickSlider.Title>
-            <BannerSlickSlider.Content>Content</BannerSlickSlider.Content>
-            <a>
-              <BannerSlickSlider.Button>Learn More</BannerSlickSlider.Button>
-            </a>
-          </BannerSlickSlider.ElWrapper>
-        ))}
-        {/* <BannerSlickSlider.ElWrapper>
-          <BannerSlickSlider.Logo src={""} />
-          <BannerSlickSlider.Title>Title</BannerSlickSlider.Title>
-          <BannerSlickSlider.Content>Content</BannerSlickSlider.Content>
-          <a>
-            <BannerSlickSlider.Button>Learn More</BannerSlickSlider.Button>
-          </a>
-        </BannerSlickSlider.ElWrapper> */}
-      </BannerSlickSlider.CustomSlider>
+      {data === null ? (
+        <></>
+      ) : (
+        <BannerSlickSlider.CustomSlider {...settings}>
+          {data?.map((el: any, idx: number) => (
+            <BannerSlickSlider.ElWrapper key={idx} imgUrl={el.imgUrl1}>
+              <BannerSlickSlider.Logo src={""} />
+              <BannerSlickSlider.Title>
+                {el.bannerTitle}
+              </BannerSlickSlider.Title>
+              <BannerSlickSlider.Content>{el.text1}</BannerSlickSlider.Content>
+              <a>
+                <BannerSlickSlider.Button>Learn More</BannerSlickSlider.Button>
+              </a>
+            </BannerSlickSlider.ElWrapper>
+          ))}
+        </BannerSlickSlider.CustomSlider>
+      )}
     </BannerSlickSlider.Wrapper>
   );
 }
