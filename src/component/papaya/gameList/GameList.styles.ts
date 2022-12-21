@@ -75,6 +75,7 @@ export const ElWrapper = styled.div`
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 export const ElThumbnail = styled.img``;

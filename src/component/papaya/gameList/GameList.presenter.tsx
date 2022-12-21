@@ -1,14 +1,8 @@
-import GameListEl from "./\bGameListEl";
+import GameListEl from "./GameListEl";
 import * as GameList from "./GameList.styles";
 import GameListModal from "./gameListModal/GameListModal.container";
 
-export default function GameListUI({
-  tapState,
-  setTapState,
-  hoverSate,
-  setHoverState,
-  gameListData,
-}) {
+export default function GameListUI({ tapState, setTapState, gameListData }) {
   return (
     <>
       <GameList.Wrapper>
@@ -47,40 +41,20 @@ export default function GameListUI({
         </GameList.TopSection>
         <GameList.ListsSection>
           {/* 각각의 게임 박스 */}
-          {gameListData.map((el, idx) => (
-            <GameListEl
-              hoverSate={hoverSate}
-              setHoverState={setHoverState}
-              el={el}
-              key={idx}
-              index={idx}
-            />
-            // <>
-            //   <GameList.ElWrapper
-            //     onMouseEnter={() => {
-            //       setHoverState(true);
-            //     }}
-            //     onMouseLeave={() => {
-            //       setHoverState(false);
-            //     }}
-            //   >
-            //     {/* 각각의 게임 썸네일 이미지 */}
-            //     <GameList.ElThumbnail src={el.gameThumbnail} />
-            //     <GameList.ElInfoWrapper>
-            //       {/* 각각의 게임 미니 이미지 */}
-            //       <GameList.ElInfoImg src={el.gameSmallImg} />
-            //       <GameList.ElInfoDetail>
-            //         {/* 게임명 */}
-            //         <GameList.ElInfoTitle>{el.gameTitle}</GameList.ElInfoTitle>
-            //         {/* 게임 장르 */}
-            //         <GameList.ElInfoGenre>{el.gameGenre}</GameList.ElInfoGenre>
-            //       </GameList.ElInfoDetail>
-            //     </GameList.ElInfoWrapper>
-            //   </GameList.ElWrapper>
-            //   {/* 호버 시, 모달 창 */}
-            //   {hoverSate ? <GameListModal /> : null}
-            // </>
-          ))}
+          {/* 카테고리 분류 => [0 = all], [1 = rpg], [2 = fps] */}
+          {tapState === 0
+            ? gameListData.map((el, idx) => (
+                <GameListEl el={el} key={idx} index={idx} />
+              ))
+            : tapState === 1
+            ? gameListData
+                .filter((el) => el.gameGenre === "RPG")
+                .map((el, idx) => <GameListEl el={el} key={idx} index={idx} />)
+            : tapState === 2
+            ? gameListData
+                .filter((el) => el.gameGenre === "FPS")
+                .map((el, idx) => <GameListEl el={el} key={idx} index={idx} />)
+            : null}
         </GameList.ListsSection>
       </GameList.Wrapper>
     </>
