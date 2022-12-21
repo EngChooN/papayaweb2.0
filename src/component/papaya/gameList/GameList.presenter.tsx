@@ -1,3 +1,4 @@
+import GameListEl from "./\bGameListEl";
 import * as GameList from "./GameList.styles";
 import GameListModal from "./gameListModal/GameListModal.container";
 
@@ -6,6 +7,7 @@ export default function GameListUI({
   setTapState,
   hoverSate,
   setHoverState,
+  gameListData,
 }) {
   return (
     <>
@@ -45,37 +47,40 @@ export default function GameListUI({
         </GameList.TopSection>
         <GameList.ListsSection>
           {/* 각각의 게임 박스 */}
-          <GameList.ElWrapper
-            onMouseEnter={() => {
-              setHoverState(true);
-            }}
-            onMouseLeave={() => {
-              setHoverState(false);
-            }}
-          >
-            {/* 각각의 게임 썸네일 이미지 */}
-            <GameList.ElThumbnail
-              src={
-                "https://static.papayaplay.com/static/assets/images/portal/event/papayaplay_christmas_theme/eos_thumb.png"
-              }
+          {gameListData.map((el, idx) => (
+            <GameListEl
+              hoverSate={hoverSate}
+              setHoverState={setHoverState}
+              el={el}
+              key={idx}
+              index={idx}
             />
-            <GameList.ElInfoWrapper>
-              {/* 각각의 게임 미니 이미지 */}
-              <GameList.ElInfoImg
-                src={
-                  "https://static.papayaplay.com/static/assets/images/portal/gnb/2021_new/eos_sm.png"
-                }
-              />
-              <GameList.ElInfoDetail>
-                {/* 게임명 */}
-                <GameList.ElInfoTitle>Echo Of Soul</GameList.ElInfoTitle>
-                {/* 게임 장르 */}
-                <GameList.ElInfoGenre>RPG</GameList.ElInfoGenre>
-              </GameList.ElInfoDetail>
-            </GameList.ElInfoWrapper>
-            {/* 호버 시, 모달 창 */}
-            {hoverSate ? <GameListModal /> : null}
-          </GameList.ElWrapper>
+            // <>
+            //   <GameList.ElWrapper
+            //     onMouseEnter={() => {
+            //       setHoverState(true);
+            //     }}
+            //     onMouseLeave={() => {
+            //       setHoverState(false);
+            //     }}
+            //   >
+            //     {/* 각각의 게임 썸네일 이미지 */}
+            //     <GameList.ElThumbnail src={el.gameThumbnail} />
+            //     <GameList.ElInfoWrapper>
+            //       {/* 각각의 게임 미니 이미지 */}
+            //       <GameList.ElInfoImg src={el.gameSmallImg} />
+            //       <GameList.ElInfoDetail>
+            //         {/* 게임명 */}
+            //         <GameList.ElInfoTitle>{el.gameTitle}</GameList.ElInfoTitle>
+            //         {/* 게임 장르 */}
+            //         <GameList.ElInfoGenre>{el.gameGenre}</GameList.ElInfoGenre>
+            //       </GameList.ElInfoDetail>
+            //     </GameList.ElInfoWrapper>
+            //   </GameList.ElWrapper>
+            //   {/* 호버 시, 모달 창 */}
+            //   {hoverSate ? <GameListModal /> : null}
+            // </>
+          ))}
         </GameList.ListsSection>
       </GameList.Wrapper>
     </>
