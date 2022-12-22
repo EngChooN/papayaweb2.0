@@ -8,13 +8,17 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
+import { QueryClientProvider, QueryClient } from "react-query";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const queryClient = new QueryClient();
   return (
-    <RecoilRoot>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </RecoilRoot>
+    <QueryClientProvider client={queryClient}>
+      <RecoilRoot>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </RecoilRoot>
+    </QueryClientProvider>
   );
 }
